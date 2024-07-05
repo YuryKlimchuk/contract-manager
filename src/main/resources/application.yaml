@@ -1,0 +1,17 @@
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    url: jdbc:postgresql://localhost:5433/contract
+    username: user
+    password: pwd
+
+flyway:
+  user: user
+  password: pwd
+  schemas: app-db
+  url: jdbc:postgresql://localhost:5433/contact
+  location: filesystem:db/migration
+

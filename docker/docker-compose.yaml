@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+
+  postgres-db:
+    container_name: contract-db
+    #restart: newer
+    image: postgres:16.2
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_DB=contract
+      - POSTGRES_PASSWORD=pwd
+    volumes:
+      - "db-volume-contracts:/var/lib/postgresql/data"
+
+volumes:
+  db-volume-contracts:
