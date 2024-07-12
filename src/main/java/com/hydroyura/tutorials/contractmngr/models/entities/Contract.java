@@ -1,8 +1,6 @@
 package com.hydroyura.tutorials.contractmngr.models.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.UUID;
 
@@ -11,7 +9,9 @@ import java.util.UUID;
 public class Contract {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
+
     private String client;
 
 
